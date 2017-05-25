@@ -3,11 +3,19 @@
 // new row funct()
 // sum-total $$
 
-function calculateTotal(e) {
-      if (e.key !== 'Tab') {
-        // check if delay is long enough ttd
+//  muliply qty & itmPrice$
+function calculateSubTotal(e) {
 
-        // if delay is long enough, check if value is number
+      if (e.key === 'Escape') {
+        // clear input data
+          $(e.target).val('');
+        // clear subtotal
+          $(e.target).parents('.dataRow').
+                      first().
+                      find('.qtyPriceTotal').text('Total $$');
+      }
+      else if (e.key !== 'Tab') {
+        // check if value is number
         var tInput = e.target;
         var result;
 
@@ -36,21 +44,28 @@ function calculateTotal(e) {
       }
 }
 
+//  sum total of all itmsPrices$
+function calculateTotal() {
+  var toPrice = 0;
+  $('.qtyPriceTotal').each((i, e)=>{ toPrice += parseCurrency(e.innerText);});
+  $('.totalPrice').first().text(formatter.format(toPrice.toFixed(2)));
+}
+
+//  handle cancel button click
 function resetChanges(e) {
-
+  // get target elements
   var eParent = e.target.parentElement;
-
   var totalPrice = eParent.nextElementSibling.firstElementChild;
   var targetInput = eParent.previousElementSibling.firstElementChild;
-
+  // clear values
   targetInput.value = "";
-
+  // set default msg
   totalPrice.innerText = totalPriceDefaultMsg;
 }
 
 $('document').ready(()=>{
     $('button').on('click', resetChanges);
-    $('input').on('keyup',calculateTotal);
-    $('.qtyPriceTotal').on('DOMSubtreeModified', ()=> console.log('changed'))
-    // $('input').on('change',inputValueChanged);
+    $('input').on('keyup',calculateSubTotal);
+    $('.qtyPriceTotal').on('DOMSubtreeModified', calculateTotal);
+    // $('input').on('change',inputValueChanged); --not working?
 });

@@ -1,20 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="js/application.js"></script>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-  </head>
-  <body>
-    
-  </body>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row rHead">
+      <h1>Shopping Cart</h1>
+    </div>
+
+    <div class="row rTable">
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Salmon</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$60.20</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="1" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Tuna</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$50.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="2" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Carp</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$40.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="3" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Pork</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$50.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="4" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Beef</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$40.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="5" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Chicken</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$25.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="6" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Cereal</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$45.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="7" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Milk</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$20.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="8" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+
+      <div class="row col-md-12 col-xs-12 dataRow">
+        <div class="col-md-2 col-xs-2">
+          <span>Sugar</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span>$10.00</span>
+        </div>
+        <div class="col-md-1 col-xs-1">
+          <span>Qty.</span>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <input placeholder=" input qty." type="number" name="quantity" min="0" max="100" tabindex="9" />
+        </div>
+        <!-- <div class="col-md-1 col-xs-1 clearfix"></div> -->
+        <div class="col-md-2 col-xs-2">
+          <button>cancel</button>
+        </div>
+        <div class="col-md-2 col-xs-2">
+          <span class="qtyPriceTotal">Total $$</span>
+        </div>
+      </div>
+    </div>
+
+
+<!-- row rFinal  -->
+    <div class="col-md-3 col-xs-3 col-md-offset-8 col-xs-offset-8">
+      <h2>Total Price:</h2>
+      <h2 class="totalPrice">$ xx</h2>
+    </div>
+
+  </div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/event_handling.js"></script>
+</body>
+
 </html>
